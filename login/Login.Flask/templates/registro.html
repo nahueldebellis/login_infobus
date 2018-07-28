@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Log in</title>
+</head>
+<body>
+	<form method="post" action="/registro">
+		<label>Name</label>		
+		<input type="text" name="name" required="true" placeholder="Name"></br>
+		<label>Password</label>
+		<input type="password" name="pass" required="true" placeholder="Password"></br>
+		<label>Email</label>
+		<input type="text" required="true" name="email" id="email" placeholder="Email"></br>
+		<input type="submit" name="">
+	</form>
+	<script>
+	
+		let email = document.getElementById('email');
+		email.addEventListener("change", function(){
+			let txt = email.value;
+			let reg = /.*@.{5}(?:\..{3}$|\..{3}\..{2}$)/
+			if(reg.exec(txt)){
+				alert("Correcto")
+			}
+			else{
+				alert("Email incorrecto");
+			}
+
+		})
+	
+
+	</script>
+</body>
+</html>
