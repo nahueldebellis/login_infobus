@@ -15,8 +15,8 @@ cursor = conn.cursor()
 def main():
 	return render_template("index.html")
 
-@app.route("/n")
-def n():
+@app.route("/nReg")
+def nReg():
 	return render_template('registro.html')
 @app.route("/login", methods=['POST'])
 def login():
